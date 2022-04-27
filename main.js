@@ -6,7 +6,7 @@ function write(file, data) {
   for (var i = 0; i < data.length; ++i) {
     chars.push(data.charCodeAt(i));
   }
-  console.log('Writing the following data to ' + file + ':\n' + data);
+  console.log('Writing the following data to ' + file + ':\n\n' + data + '\n\n');
   fs.writeFile(file, new Uint8Array(chars));
 }
 
@@ -17,7 +17,7 @@ function read(file) {
     chars.push(String.fromCharCode(data[i]));
   }
   var text = chars.join('');
-  console.log('Read the following data from ' + file + ':\n' + text);
+  console.log('Read the following data from ' + file + ':\n\n' + text + '\n\n');
   return text;
 }
 
